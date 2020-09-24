@@ -1,5 +1,4 @@
-
-
+/// print_bottles will print the number of bottles counting down from the given number.
 pub fn print_bottles(bottle_count: u8)
 {
     for i in (1..bottle_count).rev()
