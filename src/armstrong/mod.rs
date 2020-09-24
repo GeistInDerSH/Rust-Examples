@@ -1,3 +1,11 @@
+/// print_is_armstrong prints if the given number is an armstrong number.
+/// An armstrong number is one where the sum of the numbers to the power of the
+/// length of the number is equal to the number.
+/// # Example
+/// ```rust
+/// let foo: i64 = 153;
+/// assert_eq!(foo, 1*1*1 + 5*5*5 + 3*3*3);
+/// ```
 pub fn print_is_armstrong(n: i64)
 {
     // Convert the number to a string so we can get each position of the number
