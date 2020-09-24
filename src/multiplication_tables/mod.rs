@@ -1,9 +1,14 @@
+// start is the entrypoint to the module. It will get the length of the table
+// and then print the table in a formatted output.
 pub fn start()
 {
     let size = get_size_from_user();
     print_formatted(size);
 }
 
+// print_formatted prints the multiplication table with 7 spaces between each
+// column. This is done to ensure that the numbers fit inside the box without
+// overflowing, thus each column is aligned.
 fn print_formatted(s: u8)
 {
     for i in 0..s+1
@@ -37,6 +42,8 @@ fn print_formatted(s: u8)
     }
 }
 
+// get_size_from_user reads in the size of input from the user for the
+// multiplication table.
 fn get_size_from_user() -> u8
 {
     let mut user_input = String::new();
