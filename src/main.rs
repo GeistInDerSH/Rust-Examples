@@ -8,6 +8,15 @@ mod pythagoreantriples;
 mod rock_paper_scissors;
 mod multiplication_tables;
 
+/// Takes an array of strings with the options and the current position being selected
+/// and prints them out in numeric order with a right carrot to denote the currently
+/// selected option
+/// ```
+/// 1. Option 1
+/// >  Option 2
+/// 3. Option 3
+/// 4. Option 4
+/// ```
 fn print_options(options: [&'static str; 6], pos: i8)
 {
     let mut i = 0;
@@ -20,6 +29,8 @@ fn print_options(options: [&'static str; 6], pos: i8)
     }
 }
 
+/// lists all modules that the user can choose from when running the program.
+/// Returns to number of the module that the user has selected.
 fn list_modules() -> i8
 {
 
