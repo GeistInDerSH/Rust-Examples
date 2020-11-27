@@ -55,3 +55,38 @@ fn get_triple() -> PythagTriple
         c: v[2].parse().unwrap(),
     };
 }
+
+#[cfg(test)]
+mod test {
+    use super::*;
+
+    #[test]
+    fn is_triple_3_4_5() {
+        let triple = PythagTriple {a: 3, b: 4, c: 5};
+        assert_eq!(true, triple.is_triple());
+    }
+
+    #[test]
+    fn is_not_triple_4_5_6() {
+        let triple = PythagTriple {a: 4, b: 5, c: 6};
+        assert_eq!(false, triple.is_triple());
+    }
+
+    #[test]
+    fn is_triple_5_12_13() {
+        let triple = PythagTriple {a: 5, b: 12, c: 13};
+        assert_eq!(true, triple.is_triple());
+    }
+
+    #[test]
+    fn is_triple_8_15_17() {
+        let triple = PythagTriple {a: 8, b: 15, c: 17};
+        assert_eq!(true, triple.is_triple());
+    }
+
+    #[test]
+    fn is_not_triple_20_100_102() {
+        let triple = PythagTriple {a: 20, b: 100, c: 102};
+        assert_eq!(false, triple.is_triple());
+    }
+}
